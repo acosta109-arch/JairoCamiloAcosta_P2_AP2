@@ -11,7 +11,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
+import ucne.edu.jairocamiloacosta_p2_ap2.presentation.navigation.registro_entity
 import ucne.edu.jairocamiloacosta_p2_ap2.ui.theme.JairoCamiloAcosta_P2_AP2Theme
 
 @AndroidEntryPoint
@@ -21,7 +23,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             JairoCamiloAcosta_P2_AP2Theme {
-
+                val navHost = rememberNavController()
+                registro_entity(
+                    navHostController = navHost
+                )
             }
         }
     }
