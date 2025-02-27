@@ -8,13 +8,13 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
-import ucne.edu.jairocamiloacosta_p2_ap2.data.remote.entity.EntityManagerApi
+import ucne.edu.jairocamiloacosta_p2_ap2.data.remote.entity.DepositoManagerApi
 import javax.inject.Singleton
 
 @InstallIn(SingletonComponent::class)
 @Module
 object ApiModule {
-    private const val BASE_URL = ""
+    private const val BASE_URL = "https://sagapi-dev.azurewebsites.net/"
 
     @Provides
     @Singleton
@@ -26,11 +26,11 @@ object ApiModule {
 
     @Provides
     @Singleton
-    fun providesEntityApi(moshi: Moshi): EntityManagerApi {
+    fun providesDepositoApi(moshi: Moshi): DepositoManagerApi {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(MoshiConverterFactory.create(moshi))
             .build()
-            .create(EntityManagerApi::class.java)
+            .create(DepositoManagerApi::class.java)
     }
 }
