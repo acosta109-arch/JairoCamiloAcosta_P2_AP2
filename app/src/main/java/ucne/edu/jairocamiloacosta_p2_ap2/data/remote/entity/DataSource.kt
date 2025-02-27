@@ -1,18 +1,18 @@
 package ucne.edu.jairocamiloacosta_p2_ap2.data.remote.entity
 
-import ucne.edu.jairocamiloacosta_p2_ap2.data.remote.dto.EntityDto
+import ucne.edu.jairocamiloacosta_p2_ap2.data.remote.dto.DepositoDto
 import javax.inject.Inject
 
 class DataSource @Inject constructor(
-    private val entityManagerApi: EntityManagerApi
+    private val depositoManagerApi: DepositoManagerApi
 ){
-    suspend fun getEntitys() = entityManagerApi.getEntitys()
+    suspend fun getDepositos() = depositoManagerApi.getDepositos()
 
-    suspend fun getEntity(id: Int) = entityManagerApi.getEntity(id)
+    suspend fun getDeposito(id: Int) = depositoManagerApi.getDeposito(id)
 
-    suspend fun saveEntity(entityDto: EntityDto) = entityManagerApi.saveEntity(entityDto)
+    suspend fun saveDeposito(depositoDto: DepositoDto) = depositoManagerApi.saveDeposito(depositoDto)
 
-    suspend fun actualizarEntity(id: Int, entityDto: EntityDto) = entityManagerApi.actualizarEntity(id, entityDto)
+    suspend fun actualizarDeposito(id: Int, depositoDto: DepositoDto) = depositoManagerApi.actualizarDeposito(id, depositoDto)
 
-    suspend fun deleteEntity(id: Int) = entityManagerApi.deleteEntity(id)
+    suspend fun deleteDeposito(id: Int) = depositoManagerApi.deleteDeposito(id)
 }
