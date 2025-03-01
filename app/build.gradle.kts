@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    namespace = "edu.ucne.repaso2"
+    namespace = "edu.ucne.jairocamiloacosta_p2_ap2"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "edu.ucne.repaso2"
+        applicationId = "edu.ucne.jairocamiloacosta_p2_ap2"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
