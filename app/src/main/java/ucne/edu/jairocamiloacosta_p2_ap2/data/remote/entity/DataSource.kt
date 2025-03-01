@@ -8,8 +8,6 @@ class DataSource @Inject constructor(
 ){
     suspend fun getDepositos() = depositoManagerApi.getDepositos()
 
-    suspend fun getDeposito(id: Int) = depositoManagerApi.getDeposito(id)
-
     suspend fun saveDeposito(depositoDto: DepositoDto) = depositoManagerApi.saveDeposito(depositoDto)
 
     suspend fun actualizarDeposito(id: Int, depositoDto: DepositoDto) = depositoManagerApi.actualizarDeposito(id, depositoDto)
