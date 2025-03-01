@@ -9,8 +9,10 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.toRoute
+import ucne.edu.jairocamiloacosta_p2_ap2.presentation.deposito.DeleteDepositoScreen
 import ucne.edu.jairocamiloacosta_p2_ap2.presentation.depositos.DepositoListScreen
 import ucne.edu.jairocamiloacosta_p2_ap2.presentation.depositos.DepositoScreen
+import ucne.edu.jairocamiloacosta_p2_ap2.presentation.depositos.EditDepositoScreen
 
 @Composable
 fun registro_depositos(navHostController: NavHostController) {
@@ -41,6 +43,26 @@ fun registro_depositos(navHostController: NavHostController) {
         composable<Screen.Deposito> {
             val args = it.toRoute<Screen.Deposito>()
             DepositoScreen(
+                goBack = {
+                    navHostController.navigateUp()
+                }
+            )
+        }
+
+        composable<Screen.EditDeposito> {
+            val args = it.toRoute<Screen.EditDeposito>()
+            EditDepositoScreen(
+                depositoId = args.depositoId,
+                goBack = {
+                    navHostController.navigateUp()
+                }
+            )
+        }
+
+        composable<Screen.DeleteDeposito> {
+            val args = it.toRoute<Screen.DeleteDeposito>()
+            DeleteDepositoScreen(
+                depositoId = args.depositoId,
                 goBack = {
                     navHostController.navigateUp()
                 }
