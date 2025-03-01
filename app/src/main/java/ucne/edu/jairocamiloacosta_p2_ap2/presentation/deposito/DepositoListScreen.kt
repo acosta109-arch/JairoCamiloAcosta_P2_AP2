@@ -20,6 +20,7 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import kotlinx.coroutines.CoroutineScope
+import ucne.edu.jairocamiloacosta_p2_ap2.data.local.entities.DepositoEntity
 import ucne.edu.jairocamiloacosta_p2_ap2.data.remote.dto.DepositoDto
 import ucne.edu.jairocamiloacosta_p2_ap2.presentation.deposito.DepositoUiState
 import ucne.edu.jairocamiloacosta_p2_ap2.presentation.deposito.DepositoViewModel
@@ -123,7 +124,7 @@ fun DepositoListBodyScreen(
 
 @Composable
 fun DepositoRow(
-    deposito: DepositoDto,
+    deposito: DepositoEntity,
     onEditDeposito: (Int) -> Unit,
     onDeleteDeposito: (Int) -> Unit
 ) {
