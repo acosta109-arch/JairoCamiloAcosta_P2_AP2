@@ -99,9 +99,9 @@ fun EditDepositoScreen(
                 onClick = { viewModel.update() },
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Icon(Icons.Default.Refresh, contentDescription = "Guardar Cambios")
+                Icon(Icons.Default.Refresh, contentDescription = "Modificar Cambios")
                 Spacer(modifier = Modifier.width(4.dp))
-                Text(text = "Guardar Cambios")
+                Text(text = "Modificar Cambios")
             }
 
             if (uiState.errorMessage != null) {
